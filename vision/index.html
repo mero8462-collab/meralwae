@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>جلسة الرؤية · ميرال</title>
+<meta name="description" content="استمارة قصيرة قبل جلسة الرؤية: خمس دقائق تساعدني أفهم مشروعك قبل ما نلتقي.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap">
+<style>
+@font-face{font-family:ZMS;src:url(../fonts/zms.ttf);font-display:block}
+:root{--k:#0A0608;--oud:#2A1912;--bur:#5A1426;--mv:#4E3350;--cor:#E2A98F;--iv:#F3E7DC;--line:rgba(226,169,143,.22);--muted:rgba(243,231,220,.62);color-scheme:dark}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--k);color:var(--iv);font-family:'IBM Plex Sans Arabic',sans-serif;font-weight:300;-webkit-font-smoothing:antialiased;min-height:100vh;
+ background-image:radial-gradient(900px 600px at 85% -10%,rgba(90,20,38,.55),transparent 70%),radial-gradient(700px 500px at 0% 100%,rgba(78,51,80,.45),transparent 70%);background-attachment:fixed}
+.wrap{max-width:760px;margin:0 auto;padding-block:40px 120px;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+header{display:flex;justify-content:space-between;align-items:center;margin-bottom:46px}
+.mk{font-family:ZMS;font-size:32px;font-variation-settings:'long' 300;text-decoration:none;color:var(--iv)}
+.dom{font-family:'Cormorant Garamond',serif;font-size:17px;opacity:.6;direction:ltr;color:var(--iv);text-decoration:none}
+.eclipse{width:84px;height:84px;border-radius:50%;background:var(--k);box-shadow:0 0 0 1px rgba(243,231,220,.5),0 0 26px 6px rgba(226,169,143,.45),0 0 90px 30px rgba(90,20,38,.6);margin-bottom:28px;position:relative}
+.eclipse::after{content:"";position:absolute;width:7px;height:7px;border-radius:50%;background:#fff;left:8px;bottom:12px;box-shadow:0 0 12px 5px rgba(243,231,220,.8)}
+h1{font-family:ZMS;font-weight:400;font-variation-settings:'long' 0;font-size:clamp(46px,9vw,72px);line-height:1.15}
+.lead{font-size:19px;line-height:1.85;color:var(--muted);margin-top:12px;max-width:60ch}
+.lead b{color:var(--cor);font-weight:400}
+.steps{display:flex;gap:10px;margin:40px 0 30px}
+.steps span{flex:1;height:3px;border-radius:3px;background:rgba(243,231,220,.12);transition:background .4s}
+.steps span.on{background:var(--cor)}
+section.step{display:none}
+section.step.on{display:block;animation:in .5s ease}
+@keyframes in{from{opacity:.0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){section.step.on{animation:none}}
+.kick{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--cor);font-size:20px;direction:ltr;text-align:right}
+h2{font-family:ZMS;font-weight:400;font-variation-settings:'long' 0;font-size:40px;margin:2px 0 6px}
+.sub{color:var(--muted);font-size:16px;margin-bottom:26px}
+.q{padding:22px 0;border-top:1px solid var(--line)}
+.q > label,.q > .ql{display:block;font-size:19px;font-weight:400;margin-bottom:12px}
+.q .opt{font-size:14px;color:var(--muted);font-weight:300;margin-right:6px}
+input[type=text],input[type=tel],input[type=number],input[type=email],textarea{width:100%;background:rgba(243,231,220,.04);border:1px solid var(--line);border-radius:14px;padding:14px 16px;color:var(--iv);font:inherit;font-size:17px;outline:none;transition:border .2s}
+input:focus,textarea:focus{border-color:var(--cor)}
+textarea{min-height:110px;resize:vertical;line-height:1.7}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips label{cursor:pointer}
+.chips input{position:absolute;opacity:0;pointer-events:none}
+.chips span{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:10px 18px;font-size:16px;transition:all .2s;background:rgba(10,6,8,.4)}
+.chips input:checked + span{background:var(--cor);color:var(--k);border-color:var(--cor);font-weight:400}
+.chips input:focus-visible + span{outline:2px solid var(--iv);outline-offset:2px}
+.err{color:#ffb4a2;font-size:14px;margin-top:8px;display:none}
+.q.bad .err{display:block}
+.q.bad input,.q.bad textarea{border-color:#ffb4a2}
+.nav{display:flex;justify-content:space-between;align-items:center;margin-top:34px;gap:12px}
+button{font:inherit;cursor:pointer;border-radius:999px;padding:15px 30px;font-size:18px;border:1px solid var(--line);background:transparent;color:var(--iv)}
+button.primary{background:var(--cor);color:var(--k);border-color:var(--cor);font-weight:500}
+button:focus-visible{outline:2px solid var(--iv);outline-offset:3px}
+.done{text-align:center;padding-top:20px}
+.done h2{font-size:52px}
+.done p{color:var(--muted);font-size:18px;line-height:1.8;margin:10px auto 26px;max-width:46ch}
+.summary{white-space:pre-wrap;text-align:right;background:rgba(243,231,220,.04);border:1px solid var(--line);border-radius:16px;padding:18px;font-size:15px;line-height:1.8;max-height:300px;overflow:auto;margin-top:18px}
+.row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+footer{margin-top:60px;text-align:center;color:var(--muted);font-size:14px}
+footer .sl{font-family:ZMS;font-variation-settings:'long' 300;font-size:24px;color:var(--cor);display:block;margin-bottom:4px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><a class="mk" href="/">ميرال</a><a class="dom" href="/">meralwae.com</a></header>
+
+<div class="eclipse" aria-hidden="true"></div>
+<h1>جلسة الرؤية</h1>
+<p class="lead">قبل ما نلتقي، أبغى أفهم مشروعك. <b>خمس دقائق</b> بس، وكل سؤال له سبب. جاوب على قد ما تعرف، وما فيه إجابة غلط. لما تخلص تنرسل الإجابات لي على الواتساب مباشرة.</p>
+
+<div class="steps" aria-hidden="true"><span class="on"></span><span></span><span></span><span></span></div>
+
+<form id="f" novalidate>
+<!-- STEP 1 -->
+<section class="step on" data-step="1">
+ <div class="kick">01 — About you</div><h2>عنك</h2><p class="sub">عشان أعرف مع مين أتكلم.</p>
+ <div class="q" data-req><label for="name">الاسم</label><input id="name" name="الاسم" type="text" autocomplete="name"><div class="err">اكتب اسمك لو سمحت.</div></div>
+ <div class="q" data-req><label for="company">الشركة أو الجهة</label><input id="company" name="الشركة" type="text" autocomplete="organization"><div class="err">اكتب اسم الشركة.</div></div>
+ <div class="q"><label for="role">منصبك <span class="opt">اختياري</span></label><input id="role" name="المنصب" type="text" autocomplete="organization-title"></div>
+ <div class="q" data-req><label for="phone">رقم الجوال</label><input id="phone" name="الجوال" type="tel" inputmode="tel" autocomplete="tel" placeholder="05xxxxxxxx" dir="ltr" style="text-align:right"><div class="err">اكتب رقم جوال أقدر أتواصل معك عليه.</div></div>
+ <div class="q"><label for="city">مدينة المشروع</label><input id="city" name="مدينة المشروع" type="text" placeholder="جدة، الرياض، …"></div>
+</section>
+
+<!-- STEP 2 -->
+<section class="step" data-step="2">
+ <div class="kick">02 — The project</div><h2>مشروعك</h2><p class="sub">صورة سريعة عن المنتج اللي نبيعه.</p>
+ <div class="q"><div class="ql">نوع المشروع <span class="opt">تقدر تختار أكثر من وحدة</span></div><div class="chips" data-name="نوع المشروع" data-multi>
+  <label><input type="checkbox" value="شقق"><span>شقق</span></label><label><input type="checkbox" value="فلل"><span>فلل</span></label><label><input type="checkbox" value="تاون هاوس"><span>تاون هاوس</span></label><label><input type="checkbox" value="تجاري"><span>تجاري</span></label><label><input type="checkbox" value="مكاتب"><span>مكاتب</span></label><label><input type="checkbox" value="أراضي"><span>أراضي</span></label><label><input type="checkbox" value="مختلط"><span>مختلط</span></label></div></div>
+ <div class="q" data-req><div class="ql">وين وصل المشروع؟</div><div class="chips" data-name="مرحلة المشروع">
+  <label><input type="radio" name="stage" value="لسا فكرة"><span>لسا فكرة</span></label><label><input type="radio" name="stage" value="قبل الإطلاق"><span>قبل الإطلاق</span></label><label><input type="radio" name="stage" value="على الخارطة"><span>على الخارطة</span></label><label><input type="radio" name="stage" value="تحت الإنشاء"><span>تحت الإنشاء</span></label><label><input type="radio" name="stage" value="جاهز ومعروض للبيع"><span>جاهز ومعروض للبيع</span></label></div><div class="err">اختر مرحلة المشروع.</div></div>
+ <div class="q"><label for="units">كم عدد الوحدات؟</label><input id="units" name="عدد الوحدات" type="number" inputmode="numeric" min="1" placeholder="مثلًا 70" dir="ltr" style="text-align:right"></div>
+ <div class="q"><div class="ql">متوسط سعر الوحدة</div><div class="chips" data-name="متوسط سعر الوحدة">
+  <label><input type="radio" name="price" value="أقل من 800 ألف"><span>أقل من 800 ألف</span></label><label><input type="radio" name="price" value="800 ألف إلى 1.5 مليون"><span>800 ألف – 1.5 مليون</span></label><label><input type="radio" name="price" value="1.5 إلى 3 مليون"><span>1.5 – 3 مليون</span></label><label><input type="radio" name="price" value="أكثر من 3 مليون"><span>أكثر من 3 مليون</span></label></div></div>
+ <div class="q"><div class="ql">مين تتوقع يشتري؟</div><div class="chips" data-name="العميل المتوقع">
+  <label><input type="radio" name="buyer" value="ساكن"><span>ساكن</span></label><label><input type="radio" name="buyer" value="مستثمر"><span>مستثمر</span></label><label><input type="radio" name="buyer" value="الاثنين"><span>الاثنين</span></label><label><input type="radio" name="buyer" value="ما نعرف بالضبط"><span>ما نعرف بالضبط</span></label></div></div>
+ <div class="q"><div class="ql">كم انباع منه لين الحين؟</div><div class="chips" data-name="نسبة المبيع">
+  <label><input type="radio" name="sold" value="ولا وحدة"><span>ولا وحدة</span></label><label><input type="radio" name="sold" value="أقل من الربع"><span>أقل من الربع</span></label><label><input type="radio" name="sold" value="من الربع للنص"><span>من الربع للنص</span></label><label><input type="radio" name="sold" value="أكثر من النص"><span>أكثر من النص</span></label></div></div>
+</section>
+
+<!-- STEP 3 -->
+<section class="step" data-step="3">
+ <div class="kick">03 — Where you are</div><h2>وضعكم الحالي</h2><p class="sub">وش عندكم اليوم، عشان ما نبدأ من الصفر إذا ما يحتاج.</p>
+ <div class="q"><div class="ql">مين يمسك التسويق عندكم؟</div><div class="chips" data-name="فريق التسويق">
+  <label><input type="radio" name="team" value="ما عندنا أحد"><span>ما عندنا أحد</span></label><label><input type="radio" name="team" value="شخص واحد"><span>شخص واحد</span></label><label><input type="radio" name="team" value="فريق داخلي"><span>فريق داخلي</span></label><label><input type="radio" name="team" value="وكالة"><span>وكالة</span></label><label><input type="radio" name="team" value="فريق داخلي ووكالة"><span>فريق ووكالة</span></label></div></div>
+ <div class="q"><div class="ql">هوية المشروع</div><div class="chips" data-name="الهوية">
+  <label><input type="radio" name="brand" value="موجودة وراضين عنها"><span>موجودة وراضين عنها</span></label><label><input type="radio" name="brand" value="موجودة ومو راضين"><span>موجودة ومو راضين</span></label><label><input type="radio" name="brand" value="ما عندنا هوية"><span>ما عندنا هوية</span></label></div></div>
+ <div class="q"><div class="ql">وين تسوّقون حاليًا؟ <span class="opt">أكثر من وحدة</span></div><div class="chips" data-name="القنوات الحالية" data-multi>
+  <label><input type="checkbox" value="سناب"><span>سناب</span></label><label><input type="checkbox" value="تيك توك"><span>تيك توك</span></label><label><input type="checkbox" value="انستقرام"><span>انستقرام</span></label><label><input type="checkbox" value="إكس"><span>إكس</span></label><label><input type="checkbox" value="قوقل"><span>قوقل</span></label><label><input type="checkbox" value="لوحات وطرق"><span>لوحات وطرق</span></label><label><input type="checkbox" value="وسطاء"><span>وسطاء</span></label><label><input type="checkbox" value="معارض وفعاليات"><span>معارض وفعاليات</span></label><label><input type="checkbox" value="ولا شي للحين"><span>ولا شي للحين</span></label></div></div>
+ <div class="q"><div class="ql">كم عميل مهتم (ليد) يجيكم بالشهر تقريبًا؟</div><div class="chips" data-name="الليدز شهريًا">
+  <label><input type="radio" name="leads" value="أقل من 100"><span>أقل من 100</span></label><label><input type="radio" name="leads" value="100 إلى 500"><span>100 – 500</span></label><label><input type="radio" name="leads" value="500 إلى 1500"><span>500 – 1500</span></label><label><input type="radio" name="leads" value="أكثر من 1500"><span>أكثر من 1500</span></label><label><input type="radio" name="leads" value="ما نعرف"><span>ما نعرف</span></label></div></div>
+ <div class="q"><div class="ql">عندكم نظام CRM تتابعون فيه العملاء؟</div><div class="chips" data-name="نظام CRM">
+  <label><input type="radio" name="crm" value="إيه"><span>إيه</span></label><label><input type="radio" name="crm" value="جزئيًا"><span>جزئيًا</span></label><label><input type="radio" name="crm" value="لا"><span>لا</span></label></div></div>
+</section>
+
+<!-- STEP 4 -->
+<section class="step" data-step="4">
+ <div class="kick">04 — Where to go</div><h2>وين تبي توصل</h2><p class="sub">آخر خطوة. هنا يتحدد شكل الشغل.</p>
+ <div class="q" data-req><div class="ql">أهم هدف عندك خلال الشهور الجاية</div><div class="chips" data-name="الهدف">
+  <label><input type="radio" name="goal" value="بيع المخزون بسرعة"><span>بيع المخزون بسرعة</span></label><label><input type="radio" name="goal" value="إطلاق مشروع جديد"><span>إطلاق مشروع جديد</span></label><label><input type="radio" name="goal" value="بناء اسم الشركة"><span>بناء اسم الشركة</span></label><label><input type="radio" name="goal" value="تنظيم التسويق والمبيعات"><span>تنظيم التسويق والمبيعات</span></label><label><input type="radio" name="goal" value="ما أدري بالضبط"><span>ما أدري بالضبط</span></label></div><div class="err">اختر الهدف الأقرب لك.</div></div>
+ <div class="q"><div class="ql">خلال كم تبي توصل له؟</div><div class="chips" data-name="المدة">
+  <label><input type="radio" name="time" value="3 أشهر"><span>3 أشهر</span></label><label><input type="radio" name="time" value="6 أشهر"><span>6 أشهر</span></label><label><input type="radio" name="time" value="سنة"><span>سنة</span></label><label><input type="radio" name="time" value="أكثر من سنة"><span>أكثر من سنة</span></label></div></div>
+ <div class="q"><div class="ql">الميزانية التسويقية الشهرية تقريبًا</div><div class="chips" data-name="الميزانية الشهرية">
+  <label><input type="radio" name="budget" value="أقل من 50 ألف"><span>أقل من 50 ألف</span></label><label><input type="radio" name="budget" value="50 إلى 150 ألف"><span>50 – 150 ألف</span></label><label><input type="radio" name="budget" value="150 إلى 400 ألف"><span>150 – 400 ألف</span></label><label><input type="radio" name="budget" value="أكثر من 400 ألف"><span>أكثر من 400 ألف</span></label><label><input type="radio" name="budget" value="ما حددناها"><span>ما حددناها</span></label></div></div>
+ <div class="q"><label for="pain">وش أكثر شي يضايقك في تسويق المشروع اليوم؟</label><textarea id="pain" name="أكبر تحدي" placeholder="اكتب بكلامك، حتى لو جملة وحدة."></textarea></div>
+ <div class="q"><div class="ql">وش نوع التعاون اللي تفكر فيه؟</div><div class="chips" data-name="نوع التعاون">
+  <label><input type="radio" name="coop" value="توظيف داخلي"><span>توظيف داخلي</span></label><label><input type="radio" name="coop" value="مشروع أو باقة"><span>مشروع أو باقة</span></label><label><input type="radio" name="coop" value="استشارة وتشخيص"><span>استشارة وتشخيص</span></label><label><input type="radio" name="coop" value="ما أدري، ساعدني أحدد"><span>ما أدري، ساعدني أحدد</span></label></div></div>
+</section>
+
+<div class="nav" id="nav"><button type="button" id="back" hidden>رجوع</button><span></span><button type="button" class="primary" id="next">التالي</button></div>
+</form>
+
+<section class="done" id="done" hidden>
+ <div class="eclipse" style="margin:0 auto 24px" aria-hidden="true"></div>
+ <h2>شكرًا لك</h2>
+ <p>انفتح الواتساب برسالة فيها إجاباتك، اضغط إرسال وتوصلني. وإذا ما انفتح، انسخ الإجابات وأرسلها على <span dir="ltr">053 251 8007</span>.</p>
+ <div class="row"><button class="primary" id="wa2" type="button">افتح الواتساب</button><button id="copy" type="button">انسخ الإجابات</button></div>
+ <div class="summary" id="sum"></div>
+</section>
+
+<footer><span class="sl">خُلقت لأفكّر</span>إجاباتك تبقى بيني وبينك.</footer>
+</div>
+<script>
+(function(){
+const PHONE='966532518007';
+const steps=[...document.querySelectorAll('section.step')],bars=[...document.querySelectorAll('.steps span')];
+let cur=0;const next=document.getElementById('next'),back=document.getElementById('back');
+function show(i){steps.forEach((s,k)=>s.classList.toggle('on',k===i));bars.forEach((b,k)=>b.classList.toggle('on',k<=i));back.hidden=i===0;next.textContent=i===steps.length-1?'أرسل إجاباتي':'التالي';window.scrollTo({top:document.querySelector('.steps').offsetTop-20,behavior:'smooth'})}
+function val(q){const t=q.querySelector('input[type=text],input[type=tel],input[type=number],textarea');if(t)return t.value.trim();const c=[...q.querySelectorAll('.chips input:checked')].map(x=>x.value);return c.join('، ')}
+function valid(i){let ok=true;steps[i].querySelectorAll('.q[data-req]').forEach(q=>{let v=val(q);if(q.querySelector('#phone'))v=v.replace(/[^\d+]/g,'').length>=9?v:'';const bad=!v;q.classList.toggle('bad',bad);if(bad&&ok){ok=false;(q.querySelector('input,textarea')||q).focus({preventScroll:false})}});return ok}
+function label(q){const l=q.querySelector('label[for]')||q.querySelector('.ql');return (l.childNodes[0].textContent||'').trim().replace(/[؟?]$/,'')}
+function build(){const sec={1:'عنك',2:'المشروع',3:'الوضع الحالي',4:'الهدف'};let out='هلا ميرال، هذي إجاباتي على استمارة «جلسة الرؤية»:\n';steps.forEach((s,i)=>{out+='\n*'+sec[i+1]+'*\n';s.querySelectorAll('.q').forEach(q=>{const v=val(q);if(v)out+='• '+label(q)+': '+v+'\n'})});return out}
+const openWA=()=>{const u=waUrl();const w=window.open(u,'_blank');if(!w)window.location.href=u};
+let msg='';const waUrl=()=> 'https://wa.me/'+PHONE+'?text='+encodeURIComponent(msg);
+next.onclick=()=>{if(!valid(cur))return;if(cur<steps.length-1){cur++;show(cur);return}
+ msg=build();document.getElementById('f').hidden=true;document.querySelector('.steps').hidden=true;const d=document.getElementById('done');d.hidden=false;document.getElementById('sum').textContent=msg;window.scrollTo({top:0});openWA()};
+back.onclick=()=>{if(cur>0){cur--;show(cur)}};
+document.getElementById('wa2').onclick=openWA;
+document.getElementById('copy').onclick=async(e)=>{try{await navigator.clipboard.writeText(msg);e.target.textContent='انتسخت ✓'}catch(_){const r=document.createRange();r.selectNodeContents(document.getElementById('sum'));const s=getSelection();s.removeAllRanges();s.addRange(r)}};
+document.getElementById('f').addEventListener('input',e=>{const q=e.target.closest('.q');if(q)q.classList.remove('bad')});
+document.getElementById('f').addEventListener('submit',e=>e.preventDefault());
+})();
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
