@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>جلسة الرؤية · ميرال</title>
-<meta name="description" content="استمارة قصيرة قبل جلسة الرؤية: خمس دقائق تساعدني أفهم مشروعك قبل ما نلتقي.">
+<meta name="description" content="استمارة قصيرة قبل جلسة الرؤية: خمس دقائق تساعدني أفهم شركتك أو مشروعك قبل ما نلتقي.">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap">
@@ -67,64 +67,73 @@ footer .sl{font-family:ZMS;font-variation-settings:'long' 300;font-size:24px;col
 
 <div class="eclipse" aria-hidden="true"></div>
 <h1>جلسة الرؤية</h1>
-<p class="lead">قبل ما نلتقي، أبغى أفهم مشروعك. <b>خمس دقائق</b> بس، وكل سؤال له سبب. جاوب على قد ما تعرف، وما فيه إجابة غلط. لما تخلص تنرسل الإجابات لي على الواتساب مباشرة.</p>
+<p class="lead">قبل ما نلتقي، أبغى أفهم شركتك أو مشروعك. <b>خمس دقائق</b> بس، وكل سؤال له سبب. جاوب على قد ما تعرف، وما فيه إجابة غلط. لما تخلص تنرسل الإجابات لي على الواتساب مباشرة.</p>
 
-<div class="steps" aria-hidden="true"><span class="on"></span><span></span><span></span><span></span></div>
+<div class="steps" aria-hidden="true"></div>
 
 <form id="f" novalidate>
-<!-- STEP 1 -->
-<section class="step on" data-step="1">
- <div class="kick">01 — About you</div><h2>عنك</h2><p class="sub">عشان أعرف مع مين أتكلم.</p>
+<!-- STEP: about -->
+<section class="step on" data-title="عنك">
+ <div class="kick">About you</div><h2>عنك</h2><p class="sub">عشان أعرف مع مين أتكلم.</p>
  <div class="q" data-req><label for="name">الاسم</label><input id="name" name="الاسم" type="text" autocomplete="name"><div class="err">اكتب اسمك لو سمحت.</div></div>
- <div class="q" data-req><label for="company">الشركة أو الجهة</label><input id="company" name="الشركة" type="text" autocomplete="organization"><div class="err">اكتب اسم الشركة.</div></div>
+ <div class="q" data-req><label for="company">اسم الشركة</label><input id="company" name="الشركة" type="text" autocomplete="organization"><div class="err">اكتب اسم الشركة.</div></div>
  <div class="q"><label for="role">منصبك <span class="opt">اختياري</span></label><input id="role" name="المنصب" type="text" autocomplete="organization-title"></div>
  <div class="q" data-req><label for="phone">رقم الجوال</label><input id="phone" name="الجوال" type="tel" inputmode="tel" autocomplete="tel" placeholder="05xxxxxxxx" dir="ltr" style="text-align:right"><div class="err">اكتب رقم جوال أقدر أتواصل معك عليه.</div></div>
+</section>
+
+<!-- STEP: scope -->
+<section class="step" data-title="نطاق التشخيص">
+ <div class="kick">What we diagnose</div><h2>وش نشخّص؟</h2><p class="sub">الشركة لها هوية واسم مستقل عن مشاريعها، وكل مشروع له وضعه. اختر اللي تبيني أركز عليه.</p>
+ <div class="q" data-req><div class="ql">وش تبي يشمل التشخيص؟</div><div class="chips" data-name="نطاق التشخيص"><label><input type="radio" name="scope" value="الشركة كاملة"><span>الشركة كاملة بكل مشاريعها</span></label><label><input type="radio" name="scope" value="مشروع معيّن"><span>مشروع معيّن</span></label><label><input type="radio" name="scope" value="الشركة ومشروع معيّن"><span>الشركة، مع التركيز على مشروع معيّن</span></label></div><div class="err">اختر نطاق التشخيص.</div></div>
+</section>
+
+<!-- STEP: company -->
+<section class="step" data-for="company" data-title="الشركة">
+ <div class="kick">The company</div><h2>الشركة</h2><p class="sub">اسم الشركة وهويتها وكيف يشوفها السوق، بعيدًا عن أي مشروع.</p>
+ <div class="q"><div class="ql">كم صار للشركة في السوق؟</div><div class="chips" data-name="عمر الشركة"><label><input type="radio" name="age" value="أقل من 3 سنوات"><span>أقل من 3 سنوات</span></label><label><input type="radio" name="age" value="3 إلى 7 سنوات"><span>3 إلى 7 سنوات</span></label><label><input type="radio" name="age" value="7 إلى 15 سنة"><span>7 إلى 15 سنة</span></label><label><input type="radio" name="age" value="أكثر من 15 سنة"><span>أكثر من 15 سنة</span></label></div></div>
+<div class="q"><div class="ql">كم مشروع عندكم؟ <span class="opt">المنجزة والحالية والقادمة</span></div><div class="chips" data-name="عدد المشاريع"><label><input type="radio" name="count" value="مشروع واحد"><span>مشروع واحد</span></label><label><input type="radio" name="count" value="2 إلى 4"><span>2 إلى 4</span></label><label><input type="radio" name="count" value="5 إلى 10"><span>5 إلى 10</span></label><label><input type="radio" name="count" value="أكثر من 10"><span>أكثر من 10</span></label></div></div>
+<div class="q"><div class="ql">نوع مشاريعكم <span class="opt">أكثر من وحدة</span></div><div class="chips" data-name="نوع المشاريع" data-multi><label><input type="checkbox" value="شقق"><span>شقق</span></label><label><input type="checkbox" value="فلل"><span>فلل</span></label><label><input type="checkbox" value="تاون هاوس"><span>تاون هاوس</span></label><label><input type="checkbox" value="تجاري"><span>تجاري</span></label><label><input type="checkbox" value="مكاتب"><span>مكاتب</span></label><label><input type="checkbox" value="أراضي"><span>أراضي</span></label><label><input type="checkbox" value="مختلط"><span>مختلط</span></label></div></div>
+<div class="q"><label for="cities">المدن اللي تشتغلون فيها</label><input id="cities" name="المدن" type="text" placeholder="جدة، الرياض، …"></div>
+<div class="q"><div class="ql">هوية الشركة نفسها</div><div class="chips" data-name="هوية الشركة"><label><input type="radio" name="cbrand" value="موجودة وراضين عنها"><span>موجودة وراضين عنها</span></label><label><input type="radio" name="cbrand" value="موجودة ومو راضين"><span>موجودة ومو راضين</span></label><label><input type="radio" name="cbrand" value="قديمة وتحتاج تطوير"><span>قديمة وتحتاج تطوير</span></label><label><input type="radio" name="cbrand" value="ما عندنا هوية واضحة"><span>ما عندنا هوية واضحة</span></label></div></div>
+<div class="q"><div class="ql">وش العلاقة بين هوية الشركة وهويات مشاريعها؟</div><div class="chips" data-name="علاقة الهويات"><label><input type="radio" name="arch" value="كل مشروع له هوية مستقلة"><span>كل مشروع له هوية مستقلة</span></label><label><input type="radio" name="arch" value="المشاريع تحت مظلة هوية الشركة"><span>المشاريع تحت مظلة هوية الشركة</span></label><label><input type="radio" name="arch" value="مختلط"><span>مختلط</span></label><label><input type="radio" name="arch" value="ما فيه نظام واضح"><span>ما فيه نظام واضح</span></label></div></div>
+<div class="q"><div class="ql">كيف يعرفكم السوق اليوم؟</div><div class="chips" data-name="صورة الشركة في السوق"><label><input type="radio" name="image" value="اسم معروف وموثوق"><span>اسم معروف وموثوق</span></label><label><input type="radio" name="image" value="معروفين بمشروع واحد بس"><span>معروفين بمشروع واحد بس</span></label><label><input type="radio" name="image" value="الناس تعرف مشاريعنا أكثر من اسمنا"><span>الناس تعرف مشاريعنا أكثر من اسمنا</span></label><label><input type="radio" name="image" value="ما نعرف كثير"><span>ما نعرف كثير</span></label><label><input type="radio" name="image" value="سمعة تحتاج تصحيح"><span>سمعة تحتاج تصحيح</span></label></div></div>
+<div class="q"><div class="ql">حسابات التواصل</div><div class="chips" data-name="حسابات التواصل"><label><input type="radio" name="social" value="للشركة حسابات نشطة"><span>للشركة حسابات نشطة</span></label><label><input type="radio" name="social" value="موجودة بس مو منتظمة"><span>موجودة بس مو منتظمة</span></label><label><input type="radio" name="social" value="كل مشروع له حساباته بس"><span>كل مشروع له حساباته بس</span></label><label><input type="radio" name="social" value="ما عندنا"><span>ما عندنا</span></label></div></div>
+<div class="q"><label for="portfolio">مشاريعكم باختصار <span class="opt">اختياري</span></label><textarea id="portfolio" name="المشاريع" placeholder="اسم المشروع، مرحلته، عدد الوحدات، وكم انباع منه تقريبًا. كل مشروع في سطر."></textarea></div>
+</section>
+
+<!-- STEP: project -->
+<section class="step" data-for="project" data-title="المشروع">
+ <div class="kick">The project</div><h2 id="projTitle">المشروع</h2><p class="sub">صورة سريعة عن المنتج اللي نبيعه.</p>
+ <div class="q"><label for="pname">اسم المشروع</label><input id="pname" name="اسم المشروع" type="text"></div>
  <div class="q"><label for="city">مدينة المشروع</label><input id="city" name="مدينة المشروع" type="text" placeholder="جدة، الرياض، …"></div>
+ <div class="q"><div class="ql">نوع المشروع <span class="opt">تقدر تختار أكثر من وحدة</span></div><div class="chips" data-name="نوع المشروع" data-multi><label><input type="checkbox" value="شقق"><span>شقق</span></label><label><input type="checkbox" value="فلل"><span>فلل</span></label><label><input type="checkbox" value="تاون هاوس"><span>تاون هاوس</span></label><label><input type="checkbox" value="تجاري"><span>تجاري</span></label><label><input type="checkbox" value="مكاتب"><span>مكاتب</span></label><label><input type="checkbox" value="أراضي"><span>أراضي</span></label><label><input type="checkbox" value="مختلط"><span>مختلط</span></label></div></div>
+<div class="q" data-req><div class="ql">وين وصل المشروع؟</div><div class="chips" data-name="مرحلة المشروع"><label><input type="radio" name="stage" value="لسا فكرة"><span>لسا فكرة</span></label><label><input type="radio" name="stage" value="قبل الإطلاق"><span>قبل الإطلاق</span></label><label><input type="radio" name="stage" value="على الخارطة"><span>على الخارطة</span></label><label><input type="radio" name="stage" value="تحت الإنشاء"><span>تحت الإنشاء</span></label><label><input type="radio" name="stage" value="جاهز ومعروض للبيع"><span>جاهز ومعروض للبيع</span></label></div><div class="err">اختر مرحلة المشروع.</div></div>
+<div class="q"><label for="units">كم عدد الوحدات؟</label><input id="units" name="عدد الوحدات" type="number" inputmode="numeric" min="1" placeholder="مثلًا 70" dir="ltr" style="text-align:right"></div>
+<div class="q"><div class="ql">متوسط سعر الوحدة</div><div class="chips" data-name="متوسط سعر الوحدة"><label><input type="radio" name="price" value="أقل من 800 ألف"><span>أقل من 800 ألف</span></label><label><input type="radio" name="price" value="800 ألف إلى 1.5 مليون"><span>800 ألف – 1.5 مليون</span></label><label><input type="radio" name="price" value="1.5 إلى 3 مليون"><span>1.5 – 3 مليون</span></label><label><input type="radio" name="price" value="أكثر من 3 مليون"><span>أكثر من 3 مليون</span></label></div></div>
+<div class="q"><div class="ql">مين تتوقع يشتري؟</div><div class="chips" data-name="العميل المتوقع"><label><input type="radio" name="buyer" value="ساكن"><span>ساكن</span></label><label><input type="radio" name="buyer" value="مستثمر"><span>مستثمر</span></label><label><input type="radio" name="buyer" value="الاثنين"><span>الاثنين</span></label><label><input type="radio" name="buyer" value="ما نعرف بالضبط"><span>ما نعرف بالضبط</span></label></div></div>
+<div class="q"><div class="ql">كم انباع منه لين الحين؟</div><div class="chips" data-name="نسبة المبيع"><label><input type="radio" name="sold" value="ولا وحدة"><span>ولا وحدة</span></label><label><input type="radio" name="sold" value="أقل من الربع"><span>أقل من الربع</span></label><label><input type="radio" name="sold" value="من الربع للنص"><span>من الربع للنص</span></label><label><input type="radio" name="sold" value="أكثر من النص"><span>أكثر من النص</span></label></div></div>
+<div class="q"><div class="ql">هوية المشروع</div><div class="chips" data-name="هوية المشروع"><label><input type="radio" name="brand" value="موجودة وراضين عنها"><span>موجودة وراضين عنها</span></label><label><input type="radio" name="brand" value="موجودة ومو راضين"><span>موجودة ومو راضين</span></label><label><input type="radio" name="brand" value="ما عندنا هوية"><span>ما عندنا هوية</span></label></div></div>
+<div class="q"><div class="ql">المشروع يطلع باسم الشركة أو كعلامة مستقلة؟</div><div class="chips" data-name="علاقته بالشركة"><label><input type="radio" name="rel" value="تحت اسم الشركة"><span>تحت اسم الشركة</span></label><label><input type="radio" name="rel" value="علامة مستقلة"><span>علامة مستقلة</span></label><label><input type="radio" name="rel" value="ما قررنا"><span>ما قررنا</span></label></div></div>
 </section>
 
-<!-- STEP 2 -->
-<section class="step" data-step="2">
- <div class="kick">02 — The project</div><h2>مشروعك</h2><p class="sub">صورة سريعة عن المنتج اللي نبيعه.</p>
- <div class="q"><div class="ql">نوع المشروع <span class="opt">تقدر تختار أكثر من وحدة</span></div><div class="chips" data-name="نوع المشروع" data-multi>
-  <label><input type="checkbox" value="شقق"><span>شقق</span></label><label><input type="checkbox" value="فلل"><span>فلل</span></label><label><input type="checkbox" value="تاون هاوس"><span>تاون هاوس</span></label><label><input type="checkbox" value="تجاري"><span>تجاري</span></label><label><input type="checkbox" value="مكاتب"><span>مكاتب</span></label><label><input type="checkbox" value="أراضي"><span>أراضي</span></label><label><input type="checkbox" value="مختلط"><span>مختلط</span></label></div></div>
- <div class="q" data-req><div class="ql">وين وصل المشروع؟</div><div class="chips" data-name="مرحلة المشروع">
-  <label><input type="radio" name="stage" value="لسا فكرة"><span>لسا فكرة</span></label><label><input type="radio" name="stage" value="قبل الإطلاق"><span>قبل الإطلاق</span></label><label><input type="radio" name="stage" value="على الخارطة"><span>على الخارطة</span></label><label><input type="radio" name="stage" value="تحت الإنشاء"><span>تحت الإنشاء</span></label><label><input type="radio" name="stage" value="جاهز ومعروض للبيع"><span>جاهز ومعروض للبيع</span></label></div><div class="err">اختر مرحلة المشروع.</div></div>
- <div class="q"><label for="units">كم عدد الوحدات؟</label><input id="units" name="عدد الوحدات" type="number" inputmode="numeric" min="1" placeholder="مثلًا 70" dir="ltr" style="text-align:right"></div>
- <div class="q"><div class="ql">متوسط سعر الوحدة</div><div class="chips" data-name="متوسط سعر الوحدة">
-  <label><input type="radio" name="price" value="أقل من 800 ألف"><span>أقل من 800 ألف</span></label><label><input type="radio" name="price" value="800 ألف إلى 1.5 مليون"><span>800 ألف – 1.5 مليون</span></label><label><input type="radio" name="price" value="1.5 إلى 3 مليون"><span>1.5 – 3 مليون</span></label><label><input type="radio" name="price" value="أكثر من 3 مليون"><span>أكثر من 3 مليون</span></label></div></div>
- <div class="q"><div class="ql">مين تتوقع يشتري؟</div><div class="chips" data-name="العميل المتوقع">
-  <label><input type="radio" name="buyer" value="ساكن"><span>ساكن</span></label><label><input type="radio" name="buyer" value="مستثمر"><span>مستثمر</span></label><label><input type="radio" name="buyer" value="الاثنين"><span>الاثنين</span></label><label><input type="radio" name="buyer" value="ما نعرف بالضبط"><span>ما نعرف بالضبط</span></label></div></div>
- <div class="q"><div class="ql">كم انباع منه لين الحين؟</div><div class="chips" data-name="نسبة المبيع">
-  <label><input type="radio" name="sold" value="ولا وحدة"><span>ولا وحدة</span></label><label><input type="radio" name="sold" value="أقل من الربع"><span>أقل من الربع</span></label><label><input type="radio" name="sold" value="من الربع للنص"><span>من الربع للنص</span></label><label><input type="radio" name="sold" value="أكثر من النص"><span>أكثر من النص</span></label></div></div>
+<!-- STEP: marketing now -->
+<section class="step" data-title="التسويق والمبيعات اليوم">
+ <div class="kick">Where you are</div><h2>وضعكم الحالي</h2><p class="sub">وش عندكم اليوم، عشان ما نبدأ من الصفر إذا ما يحتاج.</p>
+ <div class="q"><div class="ql">مين يمسك التسويق عندكم؟</div><div class="chips" data-name="فريق التسويق"><label><input type="radio" name="team" value="ما عندنا أحد"><span>ما عندنا أحد</span></label><label><input type="radio" name="team" value="شخص واحد"><span>شخص واحد</span></label><label><input type="radio" name="team" value="فريق داخلي"><span>فريق داخلي</span></label><label><input type="radio" name="team" value="وكالة"><span>وكالة</span></label><label><input type="radio" name="team" value="فريق داخلي ووكالة"><span>فريق ووكالة</span></label></div></div>
+<div class="q"><div class="ql">مين يبيع؟</div><div class="chips" data-name="المبيعات"><label><input type="radio" name="sales" value="فريق مبيعات داخلي"><span>فريق مبيعات داخلي</span></label><label><input type="radio" name="sales" value="وسطاء ومسوقين"><span>وسطاء ومسوقين</span></label><label><input type="radio" name="sales" value="الاثنين"><span>الاثنين</span></label><label><input type="radio" name="sales" value="وكالة تسويق وبيع"><span>وكالة تسويق وبيع</span></label><label><input type="radio" name="sales" value="ما عندنا للحين"><span>ما عندنا للحين</span></label></div></div>
+<div class="q"><div class="ql">وين تسوّقون حاليًا؟ <span class="opt">أكثر من وحدة</span></div><div class="chips" data-name="القنوات الحالية" data-multi><label><input type="checkbox" value="سناب"><span>سناب</span></label><label><input type="checkbox" value="تيك توك"><span>تيك توك</span></label><label><input type="checkbox" value="انستقرام"><span>انستقرام</span></label><label><input type="checkbox" value="إكس"><span>إكس</span></label><label><input type="checkbox" value="قوقل"><span>قوقل</span></label><label><input type="checkbox" value="لوحات وطرق"><span>لوحات وطرق</span></label><label><input type="checkbox" value="وسطاء"><span>وسطاء</span></label><label><input type="checkbox" value="معارض وفعاليات"><span>معارض وفعاليات</span></label><label><input type="checkbox" value="ولا شي للحين"><span>ولا شي للحين</span></label></div></div>
+<div class="q"><div class="ql">كم عميل مهتم (ليد) يجيكم بالشهر تقريبًا؟</div><div class="chips" data-name="الليدز شهريًا"><label><input type="radio" name="leads" value="أقل من 100"><span>أقل من 100</span></label><label><input type="radio" name="leads" value="100 إلى 500"><span>100 – 500</span></label><label><input type="radio" name="leads" value="500 إلى 1500"><span>500 – 1500</span></label><label><input type="radio" name="leads" value="أكثر من 1500"><span>أكثر من 1500</span></label><label><input type="radio" name="leads" value="ما نعرف"><span>ما نعرف</span></label></div></div>
+<div class="q"><div class="ql">عندكم نظام CRM تتابعون فيه العملاء؟</div><div class="chips" data-name="نظام CRM"><label><input type="radio" name="crm" value="إيه"><span>إيه</span></label><label><input type="radio" name="crm" value="جزئيًا"><span>جزئيًا</span></label><label><input type="radio" name="crm" value="لا"><span>لا</span></label></div></div>
 </section>
 
-<!-- STEP 3 -->
-<section class="step" data-step="3">
- <div class="kick">03 — Where you are</div><h2>وضعكم الحالي</h2><p class="sub">وش عندكم اليوم، عشان ما نبدأ من الصفر إذا ما يحتاج.</p>
- <div class="q"><div class="ql">مين يمسك التسويق عندكم؟</div><div class="chips" data-name="فريق التسويق">
-  <label><input type="radio" name="team" value="ما عندنا أحد"><span>ما عندنا أحد</span></label><label><input type="radio" name="team" value="شخص واحد"><span>شخص واحد</span></label><label><input type="radio" name="team" value="فريق داخلي"><span>فريق داخلي</span></label><label><input type="radio" name="team" value="وكالة"><span>وكالة</span></label><label><input type="radio" name="team" value="فريق داخلي ووكالة"><span>فريق ووكالة</span></label></div></div>
- <div class="q"><div class="ql">هوية المشروع</div><div class="chips" data-name="الهوية">
-  <label><input type="radio" name="brand" value="موجودة وراضين عنها"><span>موجودة وراضين عنها</span></label><label><input type="radio" name="brand" value="موجودة ومو راضين"><span>موجودة ومو راضين</span></label><label><input type="radio" name="brand" value="ما عندنا هوية"><span>ما عندنا هوية</span></label></div></div>
- <div class="q"><div class="ql">وين تسوّقون حاليًا؟ <span class="opt">أكثر من وحدة</span></div><div class="chips" data-name="القنوات الحالية" data-multi>
-  <label><input type="checkbox" value="سناب"><span>سناب</span></label><label><input type="checkbox" value="تيك توك"><span>تيك توك</span></label><label><input type="checkbox" value="انستقرام"><span>انستقرام</span></label><label><input type="checkbox" value="إكس"><span>إكس</span></label><label><input type="checkbox" value="قوقل"><span>قوقل</span></label><label><input type="checkbox" value="لوحات وطرق"><span>لوحات وطرق</span></label><label><input type="checkbox" value="وسطاء"><span>وسطاء</span></label><label><input type="checkbox" value="معارض وفعاليات"><span>معارض وفعاليات</span></label><label><input type="checkbox" value="ولا شي للحين"><span>ولا شي للحين</span></label></div></div>
- <div class="q"><div class="ql">كم عميل مهتم (ليد) يجيكم بالشهر تقريبًا؟</div><div class="chips" data-name="الليدز شهريًا">
-  <label><input type="radio" name="leads" value="أقل من 100"><span>أقل من 100</span></label><label><input type="radio" name="leads" value="100 إلى 500"><span>100 – 500</span></label><label><input type="radio" name="leads" value="500 إلى 1500"><span>500 – 1500</span></label><label><input type="radio" name="leads" value="أكثر من 1500"><span>أكثر من 1500</span></label><label><input type="radio" name="leads" value="ما نعرف"><span>ما نعرف</span></label></div></div>
- <div class="q"><div class="ql">عندكم نظام CRM تتابعون فيه العملاء؟</div><div class="chips" data-name="نظام CRM">
-  <label><input type="radio" name="crm" value="إيه"><span>إيه</span></label><label><input type="radio" name="crm" value="جزئيًا"><span>جزئيًا</span></label><label><input type="radio" name="crm" value="لا"><span>لا</span></label></div></div>
-</section>
-
-<!-- STEP 4 -->
-<section class="step" data-step="4">
- <div class="kick">04 — Where to go</div><h2>وين تبي توصل</h2><p class="sub">آخر خطوة. هنا يتحدد شكل الشغل.</p>
- <div class="q" data-req><div class="ql">أهم هدف عندك خلال الشهور الجاية</div><div class="chips" data-name="الهدف">
-  <label><input type="radio" name="goal" value="بيع المخزون بسرعة"><span>بيع المخزون بسرعة</span></label><label><input type="radio" name="goal" value="إطلاق مشروع جديد"><span>إطلاق مشروع جديد</span></label><label><input type="radio" name="goal" value="بناء اسم الشركة"><span>بناء اسم الشركة</span></label><label><input type="radio" name="goal" value="تنظيم التسويق والمبيعات"><span>تنظيم التسويق والمبيعات</span></label><label><input type="radio" name="goal" value="ما أدري بالضبط"><span>ما أدري بالضبط</span></label></div><div class="err">اختر الهدف الأقرب لك.</div></div>
- <div class="q"><div class="ql">خلال كم تبي توصل له؟</div><div class="chips" data-name="المدة">
-  <label><input type="radio" name="time" value="3 أشهر"><span>3 أشهر</span></label><label><input type="radio" name="time" value="6 أشهر"><span>6 أشهر</span></label><label><input type="radio" name="time" value="سنة"><span>سنة</span></label><label><input type="radio" name="time" value="أكثر من سنة"><span>أكثر من سنة</span></label></div></div>
- <div class="q"><div class="ql">الميزانية التسويقية الشهرية تقريبًا</div><div class="chips" data-name="الميزانية الشهرية">
-  <label><input type="radio" name="budget" value="أقل من 50 ألف"><span>أقل من 50 ألف</span></label><label><input type="radio" name="budget" value="50 إلى 150 ألف"><span>50 – 150 ألف</span></label><label><input type="radio" name="budget" value="150 إلى 400 ألف"><span>150 – 400 ألف</span></label><label><input type="radio" name="budget" value="أكثر من 400 ألف"><span>أكثر من 400 ألف</span></label><label><input type="radio" name="budget" value="ما حددناها"><span>ما حددناها</span></label></div></div>
- <div class="q"><label for="pain">وش أكثر شي يضايقك في تسويق المشروع اليوم؟</label><textarea id="pain" name="أكبر تحدي" placeholder="اكتب بكلامك، حتى لو جملة وحدة."></textarea></div>
- <div class="q"><div class="ql">وش نوع التعاون اللي تفكر فيه؟</div><div class="chips" data-name="نوع التعاون">
-  <label><input type="radio" name="coop" value="توظيف داخلي"><span>توظيف داخلي</span></label><label><input type="radio" name="coop" value="مشروع أو باقة"><span>مشروع أو باقة</span></label><label><input type="radio" name="coop" value="استشارة وتشخيص"><span>استشارة وتشخيص</span></label><label><input type="radio" name="coop" value="ما أدري، ساعدني أحدد"><span>ما أدري، ساعدني أحدد</span></label></div></div>
+<!-- STEP: goal -->
+<section class="step" data-title="الهدف">
+ <div class="kick">Where to go</div><h2>وين تبي توصل</h2><p class="sub">آخر خطوة. هنا يتحدد شكل الشغل.</p>
+ <div class="q" data-req><div class="ql">أهم أهدافك خلال الشهور الجاية <span class="opt">أكثر من وحدة</span></div><div class="chips" data-name="الأهداف" data-multi><label><input type="checkbox" value="بناء اسم الشركة وهويتها"><span>بناء اسم الشركة وهويتها</span></label><label><input type="checkbox" value="توحيد هوية الشركة ومشاريعها"><span>توحيد هوية الشركة ومشاريعها</span></label><label><input type="checkbox" value="بيع المخزون بسرعة"><span>بيع المخزون بسرعة</span></label><label><input type="checkbox" value="إطلاق مشروع جديد"><span>إطلاق مشروع جديد</span></label><label><input type="checkbox" value="بناء قسم التسويق أو تنظيمه"><span>بناء قسم التسويق أو تنظيمه</span></label><label><input type="checkbox" value="ربط التسويق بالمبيعات"><span>ربط التسويق بالمبيعات</span></label><label><input type="checkbox" value="ما أدري بالضبط"><span>ما أدري بالضبط</span></label></div><div class="err">اختر هدف واحد على الأقل.</div></div>
+<div class="q"><div class="ql">خلال كم تبي توصل له؟</div><div class="chips" data-name="المدة"><label><input type="radio" name="time" value="3 أشهر"><span>3 أشهر</span></label><label><input type="radio" name="time" value="6 أشهر"><span>6 أشهر</span></label><label><input type="radio" name="time" value="سنة"><span>سنة</span></label><label><input type="radio" name="time" value="أكثر من سنة"><span>أكثر من سنة</span></label></div></div>
+<div class="q"><div class="ql">الميزانية التسويقية الشهرية تقريبًا</div><div class="chips" data-name="الميزانية الشهرية"><label><input type="radio" name="budget" value="أقل من 50 ألف"><span>أقل من 50 ألف</span></label><label><input type="radio" name="budget" value="50 إلى 150 ألف"><span>50 – 150 ألف</span></label><label><input type="radio" name="budget" value="150 إلى 400 ألف"><span>150 – 400 ألف</span></label><label><input type="radio" name="budget" value="أكثر من 400 ألف"><span>أكثر من 400 ألف</span></label><label><input type="radio" name="budget" value="ما حددناها"><span>ما حددناها</span></label></div></div>
+<div class="q"><label for="pain">وش أكثر شي يضايقك في التسويق اليوم؟</label><textarea id="pain" name="أكبر تحدي" placeholder="اكتب بكلامك، حتى لو جملة وحدة."></textarea></div>
+<div class="q"><div class="ql">وش نوع التعاون اللي تفكر فيه؟</div><div class="chips" data-name="نوع التعاون"><label><input type="radio" name="coop" value="توظيف داخلي"><span>توظيف داخلي</span></label><label><input type="radio" name="coop" value="مشروع أو باقة"><span>مشروع أو باقة</span></label><label><input type="radio" name="coop" value="استشارة وتشخيص"><span>استشارة وتشخيص</span></label><label><input type="radio" name="coop" value="ما أدري، ساعدني أحدد"><span>ما أدري، ساعدني أحدد</span></label></div></div>
 </section>
 
 <div class="nav" id="nav"><button type="button" id="back" hidden>رجوع</button><span></span><button type="button" class="primary" id="next">التالي</button></div>
@@ -143,16 +152,19 @@ footer .sl{font-family:ZMS;font-variation-settings:'long' 300;font-size:24px;col
 <script>
 (function(){
 const PHONE='966532518007';
-const steps=[...document.querySelectorAll('section.step')],bars=[...document.querySelectorAll('.steps span')];
-let cur=0;const next=document.getElementById('next'),back=document.getElementById('back');
-function show(i){steps.forEach((s,k)=>s.classList.toggle('on',k===i));bars.forEach((b,k)=>b.classList.toggle('on',k<=i));back.hidden=i===0;next.textContent=i===steps.length-1?'أرسل إجاباتي':'التالي';window.scrollTo({top:document.querySelector('.steps').offsetTop-20,behavior:'smooth'})}
+const all=[...document.querySelectorAll('section.step')],barsEl=document.querySelector('.steps');
+function scope(){const v=(document.querySelector('input[name=scope]:checked')||{}).value||'';return {co:v==='الشركة كاملة'||v==='الشركة ومشروع معيّن',pr:v==='مشروع معيّن'||v==='الشركة ومشروع معيّن',both:v==='الشركة ومشروع معيّن'}}
+function active(){const s=scope();return all.filter(x=>!x.dataset.for||(x.dataset.for==='company'?s.co:s.pr))}
+let steps=active(),cur=0;const next=document.getElementById('next'),back=document.getElementById('back');
+function show(i){steps=active();all.forEach(s=>s.classList.toggle('on',s===steps[i]));barsEl.innerHTML=steps.map((_,k)=>'<span class="'+(k<=i?'on':'')+'"></span>').join('');back.hidden=i===0;next.textContent=i===steps.length-1?'أرسل إجاباتي':'التالي';document.getElementById('projTitle').textContent=scope().both?'المشروع اللي نركز عليه':'المشروع';if(i>0)window.scrollTo({top:barsEl.offsetTop-20,behavior:'smooth'})}
 function val(q){const t=q.querySelector('input[type=text],input[type=tel],input[type=number],textarea');if(t)return t.value.trim();const c=[...q.querySelectorAll('.chips input:checked')].map(x=>x.value);return c.join('، ')}
 function valid(i){let ok=true;steps[i].querySelectorAll('.q[data-req]').forEach(q=>{let v=val(q);if(q.querySelector('#phone'))v=v.replace(/[^\d+]/g,'').length>=9?v:'';const bad=!v;q.classList.toggle('bad',bad);if(bad&&ok){ok=false;(q.querySelector('input,textarea')||q).focus({preventScroll:false})}});return ok}
 function label(q){const l=q.querySelector('label[for]')||q.querySelector('.ql');return (l.childNodes[0].textContent||'').trim().replace(/[؟?]$/,'')}
-function build(){const sec={1:'عنك',2:'المشروع',3:'الوضع الحالي',4:'الهدف'};let out='هلا ميرال، هذي إجاباتي على استمارة «جلسة الرؤية»:\n';steps.forEach((s,i)=>{out+='\n*'+sec[i+1]+'*\n';s.querySelectorAll('.q').forEach(q=>{const v=val(q);if(v)out+='• '+label(q)+': '+v+'\n'})});return out}
+function build(){let out='هلا ميرال، هذي إجاباتي على استمارة «جلسة الرؤية»:\n';steps.forEach(s=>{const t=s.dataset.for==='project'&&scope().both?'المشروع اللي نركز عليه':s.dataset.title;let part='';s.querySelectorAll('.q').forEach(q=>{const v=val(q);if(v)part+='• '+label(q)+': '+v+'\n'});if(part)out+='\n*'+t+'*\n'+part});return out}
+show(0);
 const openWA=()=>{const u=waUrl();const w=window.open(u,'_blank');if(!w)window.location.href=u};
 let msg='';const waUrl=()=> 'https://wa.me/'+PHONE+'?text='+encodeURIComponent(msg);
-next.onclick=()=>{if(!valid(cur))return;if(cur<steps.length-1){cur++;show(cur);return}
+next.onclick=()=>{steps=active();if(!valid(cur))return;if(cur<steps.length-1){cur++;show(cur);return}
  msg=build();document.getElementById('f').hidden=true;document.querySelector('.steps').hidden=true;const d=document.getElementById('done');d.hidden=false;document.getElementById('sum').textContent=msg;window.scrollTo({top:0});openWA()};
 back.onclick=()=>{if(cur>0){cur--;show(cur)}};
 document.getElementById('wa2').onclick=openWA;
