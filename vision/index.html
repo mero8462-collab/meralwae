@@ -150,11 +150,12 @@ function val(q){const t=q.querySelector('input[type=text],input[type=tel],input[
 function valid(i){let ok=true;steps[i].querySelectorAll('.q[data-req]').forEach(q=>{let v=val(q);if(q.querySelector('#phone'))v=v.replace(/[^\d+]/g,'').length>=9?v:'';const bad=!v;q.classList.toggle('bad',bad);if(bad&&ok){ok=false;(q.querySelector('input,textarea')||q).focus({preventScroll:false})}});return ok}
 function label(q){const l=q.querySelector('label[for]')||q.querySelector('.ql');return (l.childNodes[0].textContent||'').trim().replace(/[؟?]$/,'')}
 function build(){const sec={1:'عنك',2:'المشروع',3:'الوضع الحالي',4:'الهدف'};let out='هلا ميرال، هذي إجاباتي على استمارة «جلسة الرؤية»:\n';steps.forEach((s,i)=>{out+='\n*'+sec[i+1]+'*\n';s.querySelectorAll('.q').forEach(q=>{const v=val(q);if(v)out+='• '+label(q)+': '+v+'\n'})});return out}
+const openWA=()=>{const u=waUrl();const w=window.open(u,'_blank');if(!w)window.location.href=u};
 let msg='';const waUrl=()=> 'https://wa.me/'+PHONE+'?text='+encodeURIComponent(msg);
 next.onclick=()=>{if(!valid(cur))return;if(cur<steps.length-1){cur++;show(cur);return}
- msg=build();document.getElementById('f').hidden=true;document.querySelector('.steps').hidden=true;const d=document.getElementById('done');d.hidden=false;document.getElementById('sum').textContent=msg;window.scrollTo({top:0});window.location.href=waUrl()};
+ msg=build();document.getElementById('f').hidden=true;document.querySelector('.steps').hidden=true;const d=document.getElementById('done');d.hidden=false;document.getElementById('sum').textContent=msg;window.scrollTo({top:0});openWA()};
 back.onclick=()=>{if(cur>0){cur--;show(cur)}};
-document.getElementById('wa2').onclick=()=>{window.location.href=waUrl()};
+document.getElementById('wa2').onclick=openWA;
 document.getElementById('copy').onclick=async(e)=>{try{await navigator.clipboard.writeText(msg);e.target.textContent='انتسخت ✓'}catch(_){const r=document.createRange();r.selectNodeContents(document.getElementById('sum'));const s=getSelection();s.removeAllRanges();s.addRange(r)}};
 document.getElementById('f').addEventListener('input',e=>{const q=e.target.closest('.q');if(q)q.classList.remove('bad')});
 document.getElementById('f').addEventListener('submit',e=>e.preventDefault());
