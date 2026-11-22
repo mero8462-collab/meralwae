@@ -129,6 +129,10 @@ nav a:hover{color:var(--cor)}
 .grid6{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid rgba(243,231,220,.16)}
 .grid6>div{padding:5vh clamp(14px,2.4vw,34px);border-bottom:1px solid rgba(243,231,220,.16);border-inline-start:1px solid rgba(243,231,220,.16)}
 .grid6>div:nth-child(3n+1){border-inline-start:0;padding-inline-start:0}
+.grid6>div.wide{grid-column:1/-1;display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:clamp(20px,4vw,64px);align-items:start}
+.grid6>div.wide i{grid-column:1/-1}
+.grid6>div.wide h3,.grid6>div.wide .hl{grid-column:1}
+.grid6>div.wide p{grid-column:2;grid-row:2/4;max-width:70ch}
 .grid6 i{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--cor);font-size:18px;direction:ltr;display:block}
 .grid6 h3{font-family:ZMS;font-weight:400;font-size:clamp(24px,2.6vw,34px);margin:10px 0 10px}
 .grid6 p{color:var(--muted);line-height:1.9;font-size:16px}
@@ -215,6 +219,7 @@ nav a:hover{color:var(--cor)}
   #duo .join{bottom:7vh}
   .grid6{grid-template-columns:1fr}
   .grid6>div{border-inline-start:0;padding-inline-start:0;padding-top:3.5vh;padding-bottom:3.5vh}
+  .grid6>div.wide{display:block}
   .case{grid-template-columns:1fr;padding:6vh 0}
   .path .spine{right:auto;left:22px}
   .st,.st:nth-child(even),.st:nth-child(odd){width:auto;margin-inline-start:0;margin-left:44px;padding-inline-start:0;padding-inline-end:0;padding-bottom:10vh}
@@ -301,6 +306,7 @@ nav a:hover{color:var(--cor)}
     <div class="rv"><i>04</i><h3>الحملات والأداء</h3><b class="hl">أختبر، أقيس، وأعدّل. الانطباع يقترح، والرقم يقرر.</b><p>رسائل قصيرة وواضحة، وهوك يتكلم بلغة الفئة. كل شهر أطلق تقريبًا 10 رسائل مختلفة؛ ينجح منها 2 أو 3 بقوة، فنضخ فيها أكثر. وبعدها نقيس ونحسّن… ونرجع نقيس.</p></div>
     <div class="rv"><i>05</i><h3>التسويق والمبيعات</h3><b class="hl">أتكلم لغة الفريقين.</b><p>تخصصي وشغفي التسويق والإبداع، بس اشتغلت في المبيعات وأعرف وش يحس فريقها ووش يحتاج. عشان كذا أربط كل فكرة إبداعية بهدف تجاري واضح، وأخلي الإبداع يخدم يومهم، مو يزيد عليهم.</p></div>
     <div class="rv"><i>06</i><h3>الفرق والشركاء</h3><b class="hl">أجمع الكل على هدف واحد.</b><p>وكالة خارجية، أو فريلانسر، أو فريق داخلي: أستمتع بالشغل معهم. وسرّي بسيط: وضوح من أول يوم في آلية التواصل والأهداف والتوجّه… ونتفق عليها قبل ما نبدأ.</p></div>
+    <div class="rv wide"><i>07</i><h3>السمعة والحضور</h3><b class="hl">العميل يشتري من اسم يثق فيه، قبل ما يشتري الوحدة.</b><p>سمعة المطوّر تنبني من كل نقطة يلمسها العميل: حساباته، وتقييماته في قوقل، وفعالياته وشراكاته، وظهوره في الإعلام، وعلاقته مع المسوقين والوسطاء. أتابعها كأنها مشروع بحد ذاته، عشان يكون اسم الشركة في السوق بنفس قيمة مشاريعها… أو أعلى.</p></div>
   </div>
 </section>
 
