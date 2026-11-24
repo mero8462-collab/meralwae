@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>أعمالي · ميرال</title>
-<meta name="description" content="ثلاث هويات مفاهيمية لمشاريع سكنية في جدة: وقار، رواشن، قمرية. القصة، دليل الهوية كامل، وموشن لكل مشروع.">
+<meta name="description" content="ثلاث هويات بصرية لمشاريع سكنية في جدة: وقار، رواشن، قمرية. القصة، دليل الهوية كامل، وموشن لكل مشروع.">
 <meta property="og:title" content="أعمالي · ميرال">
-<meta property="og:description" content="ثلاث هويات مفاهيمية لمشاريع سكنية في جدة.">
+<meta property="og:description" content="ثلاث هويات بصرية لمشاريع سكنية في جدة.">
 <meta property="og:image" content="https://www.meralwae.com/work/waqar/p01.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300&display=swap">
@@ -90,7 +90,6 @@ h2{font-family:ZMS;font-weight:400;font-variation-settings:'long' 0;font-size:cl
   <div class="kick">Selected work</div>
   <h1>أعمالي</h1>
   <p class="lead">أرض في جدة، وثلاث شخصيات مختلفة لها. كل هوية هنا بدأت <b>بفكرة</b> قبل الشعار: مين بيسكن، وش يحس، وليش يختار هذا المكان بالذات. وبعدها صارت نظام كامل: اسم، وشعار، وألوان، وهدية عميل، وصفحة هبوط، وسوشال.</p>
-  <span class="note">مشاريع مفاهيمية من مبادرتي، بدون عميل، لعرض طريقة تفكيري</span>
  </div>
  <div class="vid rv"><video src="media/all.mp4" poster="media/all.jpg" controls playsinline preload="metadata" aria-label="موشن يعرض الهويات الثلاث"></video></div>
 </section>
@@ -136,7 +135,7 @@ const P=[
 const pad=n=>String(n).padStart(2,'0');
 document.getElementById('projects').innerHTML=P.map(p=>`
 <section class="proj" id="${p.id}"><div class="wrap">
- <div class="ph rv"><div><span class="tag">مشروع مفاهيمي · هوية بصرية</span><h2>${p.name}</h2><div class="slogan">${p.slogan}</div></div>
+ <div class="ph rv"><div><span class="tag">هوية بصرية</span><h2>${p.name}</h2><div class="slogan">${p.slogan}</div></div>
   <div class="btns"><a class="btn fill" href="${p.id}/${p.file}-Brand-Guide.pdf" download>حمّل دليل الهوية PDF</a><a class="btn" href="${p.id}/${p.file}-Brand-Guide.pdf" target="_blank" rel="noopener">افتح الملف</a></div></div>
  <div class="facts rv">${p.facts.map(f=>`<div><b>${f[0]}</b>${f[1]}</div>`).join('')}</div>
  <div class="story">
