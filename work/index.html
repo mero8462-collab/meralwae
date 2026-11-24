@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>أعمالي · ميرال</title>
+<meta name="description" content="ثلاث هويات مفاهيمية لمشاريع سكنية في جدة: وقار، رواشن، قمرية. القصة، دليل الهوية كامل، وموشن لكل مشروع.">
+<meta property="og:title" content="أعمالي · ميرال">
+<meta property="og:description" content="ثلاث هويات مفاهيمية لمشاريع سكنية في جدة.">
+<meta property="og:image" content="https://www.meralwae.com/work/waqar/p01.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300&display=swap">
+<style>
+@font-face{font-family:ZMS;src:url(../fonts/zms.ttf);font-display:block}
+:root{--k:#0A0608;--oud:#2A1912;--bur:#5A1426;--mv:#4E3350;--cor:#E2A98F;--iv:#F3E7DC;--line:rgba(226,169,143,.22);--muted:rgba(243,231,220,.66);color-scheme:dark}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--k);color:var(--iv);font-family:'IBM Plex Sans Arabic',sans-serif;font-weight:300;-webkit-font-smoothing:antialiased;
+ background-image:radial-gradient(900px 600px at 85% -10%,rgba(90,20,38,.55),transparent 70%),radial-gradient(700px 500px at 0% 60%,rgba(78,51,80,.35),transparent 70%);background-attachment:fixed}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+header{position:sticky;top:0;z-index:10;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(10,6,8,.6);border-bottom:1px solid rgba(226,169,143,.1)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:64px;gap:14px}
+.mk{font-family:ZMS;font-size:30px;font-variation-settings:'long' 300;text-decoration:none}
+header nav{display:flex;gap:18px;font-size:15px;color:var(--muted);overflow-x:auto;white-space:nowrap}
+header nav a{text-decoration:none}
+header nav a:hover{color:var(--cor)}
+.hero{padding:70px 0 40px;display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+.eclipse{width:76px;height:76px;border-radius:50%;background:var(--k);box-shadow:0 0 0 1px rgba(243,231,220,.5),0 0 26px 6px rgba(226,169,143,.45),0 0 90px 30px rgba(90,20,38,.6);margin-bottom:26px;position:relative}
+.eclipse::after{content:"";position:absolute;width:6px;height:6px;border-radius:50%;background:#fff;left:7px;bottom:11px;box-shadow:0 0 12px 5px rgba(243,231,220,.8)}
+.kick{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--cor);font-size:20px;direction:ltr;text-align:right}
+h1{font-family:ZMS;font-weight:400;font-variation-settings:'long' 0;font-size:clamp(52px,9vw,88px);line-height:1.1}
+.lead{font-size:19px;line-height:1.9;color:var(--muted);margin-top:14px;max-width:52ch}
+.lead b{color:var(--cor);font-weight:400}
+.note{display:inline-block;margin-top:22px;border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:14px;color:var(--muted)}
+.vid{position:relative;border-radius:28px;overflow:hidden;border:1px solid rgba(243,231,220,.18);box-shadow:0 40px 80px -30px #000;background:#000;aspect-ratio:9/16;max-height:78vh;margin-inline:auto}
+.vid video{width:100%;height:100%;display:block;object-fit:cover}
+.toc{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:20px 0 40px}
+.toc a{display:block;text-decoration:none;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:rgba(243,231,220,.03);transition:transform .3s,border-color .3s}
+.toc a:hover{transform:translateY(-4px);border-color:var(--cor)}
+.toc img{width:100%;aspect-ratio:9/10;object-fit:cover;object-position:top;display:block}
+.toc span{display:block;padding:12px 16px;font-family:ZMS;font-size:28px}
+.toc small{display:block;padding:0 16px 14px;color:var(--muted);font-size:13px}
+.proj{padding:90px 0 40px;border-top:1px solid rgba(226,169,143,.12)}
+.ph{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.tag{font-size:13px;letter-spacing:.04em;color:var(--cor);border:1px solid var(--line);border-radius:999px;padding:5px 12px;display:inline-block;margin-bottom:12px}
+h2{font-family:ZMS;font-weight:400;font-variation-settings:'long' 0;font-size:clamp(56px,10vw,96px);line-height:1}
+.slogan{font-size:20px;color:var(--cor);margin-top:10px}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden;margin:34px 0}
+.facts div{background:var(--k);padding:16px 18px}
+.facts b{display:block;font-weight:400;font-size:13px;color:var(--muted);margin-bottom:4px}
+.story{display:grid;grid-template-columns:1fr 360px;gap:50px;align-items:start}
+.story h3{font-family:ZMS;font-weight:400;font-size:34px;margin:26px 0 8px;color:var(--cor)}
+.story h3:first-child{margin-top:0}
+.story p{font-size:18px;line-height:1.95;color:rgba(243,231,220,.85)}
+.story blockquote{font-family:ZMS;font-size:30px;line-height:1.5;border-right:2px solid var(--cor);padding-right:18px;margin:26px 0}
+.side{position:sticky;top:90px}
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:12px 22px;font-size:16px;text-decoration:none;border:1px solid var(--line)}
+.btn.fill{background:var(--cor);color:var(--k);border-color:var(--cor);font-weight:500}
+.btn:focus-visible{outline:2px solid var(--iv);outline-offset:3px}
+.book{margin-top:50px}
+.book .bh{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;gap:12px}
+.book .bh span{color:var(--muted);font-size:15px}
+.pages{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:16px;scrollbar-color:var(--bur) transparent}
+.pages img{flex:none;width:min(300px,70vw);aspect-ratio:9/16;border-radius:14px;scroll-snap-align:start;cursor:zoom-in;border:1px solid rgba(243,231,220,.12);background:#1a1214}
+.lb{position:fixed;inset:0;background:rgba(10,6,8,.94);display:none;align-items:center;justify-content:center;z-index:50;padding:20px}
+.lb.on{display:flex}
+.lb img{max-height:92vh;max-width:92vw;border-radius:12px}
+.lb button{position:absolute;top:16px;left:16px;background:none;border:1px solid var(--line);color:var(--iv);border-radius:999px;width:46px;height:46px;font-size:22px;cursor:pointer}
+.lb .pv,.lb .nx{top:50%;transform:translateY(-50%)}
+.lb .nx{left:16px}.lb .pv{left:auto;right:16px}
+.lb .x{top:16px}
+.end{text-align:center;padding:100px 0 120px}
+.end .sl{font-family:ZMS;font-variation-settings:'long' 300;font-size:clamp(40px,7vw,64px);color:var(--cor);display:block;margin:20px 0 6px}
+.end p{color:var(--muted);font-size:17px;margin-bottom:26px}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+@media (max-width:820px){.hero{grid-template-columns:1fr;padding-top:40px}.story{grid-template-columns:1fr}.side{position:static}.facts{grid-template-columns:1fr 1fr}.toc{grid-template-columns:1fr 1fr 1fr;gap:10px}.toc span{font-size:22px;padding:10px}.toc small{display:none}.vid{max-height:none;max-width:420px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a class="mk" href="/">ميرال</a><nav><a href="#waqar">وقار</a><a href="#rawashin">رواشن</a><a href="#qamariya">قمرية</a><a href="/vision/">جلسة الرؤية</a></nav></div></header>
+
+<main class="wrap">
+<section class="hero">
+ <div>
+  <div class="eclipse" aria-hidden="true"></div>
+  <div class="kick">Selected work</div>
+  <h1>أعمالي</h1>
+  <p class="lead">أرض في جدة، وثلاث شخصيات مختلفة لها. كل هوية هنا بدأت <b>بفكرة</b> قبل الشعار: مين بيسكن، وش يحس، وليش يختار هذا المكان بالذات. وبعدها صارت نظام كامل: اسم، وشعار، وألوان، وهدية عميل، وصفحة هبوط، وسوشال.</p>
+  <span class="note">مشاريع مفاهيمية من مبادرتي، بدون عميل، لعرض طريقة تفكيري</span>
+ </div>
+ <div class="vid rv"><video src="media/all.mp4" poster="media/all.jpg" controls playsinline preload="metadata" aria-label="موشن يعرض الهويات الثلاث"></video></div>
+</section>
+
+<nav class="toc" aria-label="المشاريع">
+ <a href="#waqar"><img src="waqar/p01.jpg" alt="غلاف هوية وقار" loading="lazy"><span>وقار</span><small>١٦ فيلا خاصة · أبحر الشمالية</small></a>
+ <a href="#rawashin"><img src="rawashin/p01.jpg" alt="غلاف هوية رواشن" loading="lazy"><span>رواشن</span><small>٣٠ فيلا بفناء داخلي · الزهراء</small></a>
+ <a href="#qamariya"><img src="qamariya/p01.jpg" alt="غلاف هوية قمرية" loading="lazy"><span>قمرية</span><small>٢٤ تاونهاوس عائلية · شمال جدة</small></a>
+</nav>
+</main>
+
+<div id="projects"></div>
+
+<div class="wrap end rv">
+ <div class="eclipse" style="margin:0 auto" aria-hidden="true"></div>
+ <span class="sl">خُلقت لأفكّر</span>
+ <p>عندك مشروع يحتاج هوية تبدأ من فكرة؟</p>
+ <div class="btns" style="justify-content:center"><a class="btn fill" href="/vision/">ابدأ جلسة الرؤية</a><a class="btn" href="/">ارجع للرئيسية</a></div>
+</div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="عرض الصفحة"><img alt=""><button class="x" aria-label="إغلاق">×</button><button class="pv" aria-label="السابقة">›</button><button class="nx" aria-label="التالية">‹</button></div>
+
+<script>
+const P=[
+ {id:'waqar',name:'وقار',file:'Waqar',n:11,slogan:'عقار يليق بمكانتك',
+  facts:[['المشروع','١٦ فيلا خاصة'],['الموقع','أبحر الشمالية، جدة'],['الجمهور','مستثمرين، رواد أعمال، وعوائل من الطبقة العليا'],['الشخصية','رزين، هادي، واثق']],
+  quote:'اللي وصل ما يحتاج يثبت شي. يبي مكان يشبه هدوءه.',
+  story:[['الفكرة','فخامة ما تحتاج ترفع صوتها. «وقار» لمن وصل، ويبي بيت يعكس مكانته بهدوء: تفاصيل محسوبة، ومواد صادقة، وخصوصية كاملة.'],
+   ['الاسم والشعار','الوقار هو الهيبة الهادية. الشعار كتابي بلا رمز: الاسم بخط ثمانية بكشيدة طويلة تعطيه نفَس ورزانة، ونقطة نحاسية واحدة هي التوقيع الوحيد.'],
+   ['الألوان والتطبيقات','أسود وقار، وعظمي، ولمسة نحاس. وهدية العميل كيس صلب مطفي بشريطة ساتان، والشعار مطبوع فويل.']]},
+ {id:'rawashin',name:'رواشن',file:'Rawashin',n:11,slogan:'دفء المنزل.. وخصوصية المكان',
+  facts:[['المشروع','٣٠ فيلا بفناء داخلي'],['الموقع','حي الزهراء، جدة'],['الجمهور','عوائل سعودية راقية تقدّر الخصوصية'],['الشخصية','دافي، حجازي، عصري']],
+  quote:'العائلة الجداوية تبي بيت مفتوح على الضوء، ومقفول على الأعين.',
+  story:[['الفكرة','الروشان سر خصوصية بيوت جدة القديمة: تشوف المدينة، وهي ما تشوفك. «رواشن» ياخذ هالفكرة لبيت اليوم: واجهات بشبك خشبي حديث، وفناء داخلي يتنفس منه البيت.'],
+   ['الشعار','شبكة روشان مبسطة ٣×٤ بخطوط هندسية، ومربع واحد نحاسي مضيء كأنه نور البيت من ورا الشبك.'],
+   ['الألوان والتطبيقات','خشب الروشان، والجص، ونور نحاسي. الباترن شبك مائل يشتغل كظل على الجدار، أو لون على لون في المطبوعات والتغليف.']]},
+ {id:'qamariya',name:'قمرية',file:'Qamariya',n:11,slogan:'ضوء جدة القديمة.. يدخل بيتك',
+  facts:[['المشروع','٢٤ تاونهاوس عائلية'],['الموقع','شمال جدة'],['الجمهور','عوائل سعودية شابة، أول بيت مستقل'],['الشخصية','دافي، مضيء، حجازي']],
+  quote:'الفخامة اللي تنحفظ مو الرخام. هي اللحظة اللي توقف فيها قدّام ضوء جميل داخل بيتك.',
+  story:[['الفكرة','فوق شبابيك بيوت البلد نص دائرة من زجاج ملوّن اسمها القمرية. الشمس تمر منها وترسم على الأرض ألوان تتحرك مع ساعات اليوم. كل بيت هنا فيه قمرية بنقشة ما تتكرر.'],
+   ['الشعار','نص دائرة مقسومة سبع شرائح زجاج، كأنها شمس طالعة من شباك. الشرائح بألوان الجواهر، وتحتها خط الأفق، وفي قلبها نقطة الضوء.'],
+   ['الألوان والتطبيقات','فيروز عميق، وجبس، وكهرمان، وياقوتي. أقواس متداخلة مثل ضوء القمرية طايح على الجدار، تنطبع على التغليف والسوشال.']]}];
+const pad=n=>String(n).padStart(2,'0');
+document.getElementById('projects').innerHTML=P.map(p=>`
+<section class="proj" id="${p.id}"><div class="wrap">
+ <div class="ph rv"><div><span class="tag">مشروع مفاهيمي · هوية بصرية</span><h2>${p.name}</h2><div class="slogan">${p.slogan}</div></div>
+  <div class="btns"><a class="btn fill" href="${p.id}/${p.file}-Brand-Guide.pdf" download>حمّل دليل الهوية PDF</a><a class="btn" href="${p.id}/${p.file}-Brand-Guide.pdf" target="_blank" rel="noopener">افتح الملف</a></div></div>
+ <div class="facts rv">${p.facts.map(f=>`<div><b>${f[0]}</b>${f[1]}</div>`).join('')}</div>
+ <div class="story">
+  <div class="rv">${p.story.map((s,i)=>`<h3>${s[0]}</h3><p>${s[1]}</p>${i==0?`<blockquote>${p.quote}</blockquote>`:''}`).join('')}</div>
+  <div class="side rv"><div class="vid"><video src="media/${p.id}.mp4" poster="media/${p.id}.jpg" controls playsinline preload="none" aria-label="موشن هوية ${p.name}"></video></div></div>
+ </div>
+ <div class="book rv"><div class="bh"><span>دليل الهوية كامل · ${p.n} صفحة</span><span>اسحب للجنب ←</span></div>
+  <div class="pages">${Array.from({length:p.n},(_,i)=>`<img src="${p.id}/p${pad(i+1)}.jpg" alt="${p.name}، صفحة ${i+1} من دليل الهوية" loading="lazy" data-g="${p.id}" data-i="${i}">`).join('')}</div></div>
+</div></section>`).join('');
+// reveal on scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+// lightbox
+const lb=document.getElementById('lb'),li=lb.querySelector('img');let G=null,I=0;
+const show=()=>{const p=P.find(q=>q.id===G);I=(I+p.n)%p.n;li.src=`${G}/p${pad(I+1)}.jpg`;li.alt=`${p.name}، صفحة ${I+1}`};
+document.addEventListener('click',e=>{const t=e.target;if(t.matches('.pages img')){G=t.dataset.g;I=+t.dataset.i;show();lb.classList.add('on');lb.querySelector('.x').focus()}});
+lb.querySelector('.x').onclick=()=>lb.classList.remove('on');
+lb.querySelector('.nx').onclick=()=>{I++;show()};lb.querySelector('.pv').onclick=()=>{I--;show()};
+lb.addEventListener('click',e=>{if(e.target===lb)lb.classList.remove('on')});
+document.addEventListener('keydown',e=>{if(!lb.classList.contains('on'))return;if(e.key==='Escape')lb.classList.remove('on');if(e.key==='ArrowLeft'){I++;show()}if(e.key==='ArrowRight'){I--;show()}});
+// only one video plays at a time
+document.querySelectorAll('video').forEach(v=>v.addEventListener('play',()=>document.querySelectorAll('video').forEach(o=>{if(o!==v)o.pause()})));
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
