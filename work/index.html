@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300&display=swap">
 <style>
-@font-face{font-family:ZMS;src:url(../fonts/zms.ttf);font-display:block}
+@font-face{font-family:ZMS;src:url(/fonts/zms.ttf);font-display:block}
 :root{--k:#0A0608;--oud:#2A1912;--bur:#5A1426;--mv:#4E3350;--cor:#E2A98F;--iv:#F3E7DC;--line:rgba(226,169,143,.22);--muted:rgba(243,231,220,.66);color-scheme:dark}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -91,13 +91,13 @@ h2{font-family:ZMS;font-weight:400;font-variation-settings:'long' 0;font-size:cl
   <h1>أعمالي</h1>
   <p class="lead">أرض في جدة، وثلاث شخصيات مختلفة لها. كل هوية هنا بدأت <b>بفكرة</b> قبل الشعار: مين بيسكن، وش يحس، وليش يختار هذا المكان بالذات. وبعدها صارت نظام كامل: اسم، وشعار، وألوان، وهدية عميل، وصفحة هبوط، وسوشال.</p>
  </div>
- <div class="vid rv"><video src="media/all.mp4" poster="media/all.jpg" controls playsinline preload="metadata" aria-label="موشن يعرض الهويات الثلاث"></video></div>
+ <div class="vid rv"><video src="/work/media/all.mp4" poster="/work/media/all.jpg" controls playsinline preload="metadata" aria-label="موشن يعرض الهويات الثلاث"></video></div>
 </section>
 
 <nav class="toc" aria-label="المشاريع">
- <a href="#waqar"><img src="waqar/p01.jpg" alt="غلاف هوية وقار" loading="lazy"><span>وقار</span><small>١٦ فيلا خاصة · أبحر الشمالية</small></a>
- <a href="#rawashin"><img src="rawashin/p01.jpg" alt="غلاف هوية رواشن" loading="lazy"><span>رواشن</span><small>٣٠ فيلا بفناء داخلي · الزهراء</small></a>
- <a href="#qamariya"><img src="qamariya/p01.jpg" alt="غلاف هوية قمرية" loading="lazy"><span>قمرية</span><small>٢٤ تاونهاوس عائلية · شمال جدة</small></a>
+ <a href="#waqar"><img src="/work/waqar/p01.jpg" alt="غلاف هوية وقار" loading="lazy"><span>وقار</span><small>١٦ فيلا خاصة · أبحر الشمالية</small></a>
+ <a href="#rawashin"><img src="/work/rawashin/p01.jpg" alt="غلاف هوية رواشن" loading="lazy"><span>رواشن</span><small>٣٠ فيلا بفناء داخلي · الزهراء</small></a>
+ <a href="#qamariya"><img src="/work/qamariya/p01.jpg" alt="غلاف هوية قمرية" loading="lazy"><span>قمرية</span><small>٢٤ تاونهاوس عائلية · شمال جدة</small></a>
 </nav>
 </main>
 
@@ -136,21 +136,21 @@ const pad=n=>String(n).padStart(2,'0');
 document.getElementById('projects').innerHTML=P.map(p=>`
 <section class="proj" id="${p.id}"><div class="wrap">
  <div class="ph rv"><div><span class="tag">هوية بصرية</span><h2>${p.name}</h2><div class="slogan">${p.slogan}</div></div>
-  <div class="btns"><a class="btn fill" href="${p.id}/${p.file}-Brand-Guide.pdf" download>حمّل دليل الهوية PDF</a><a class="btn" href="${p.id}/${p.file}-Brand-Guide.pdf" target="_blank" rel="noopener">افتح الملف</a></div></div>
+  <div class="btns"><a class="btn fill" href="/work/${p.id}/${p.file}-Brand-Guide.pdf" download>حمّل دليل الهوية PDF</a><a class="btn" href="/work/${p.id}/${p.file}-Brand-Guide.pdf" target="_blank" rel="noopener">افتح الملف</a></div></div>
  <div class="facts rv">${p.facts.map(f=>`<div><b>${f[0]}</b>${f[1]}</div>`).join('')}</div>
  <div class="story">
   <div class="rv">${p.story.map((s,i)=>`<h3>${s[0]}</h3><p>${s[1]}</p>${i==0?`<blockquote>${p.quote}</blockquote>`:''}`).join('')}</div>
-  <div class="side rv"><div class="vid"><video src="media/${p.id}.mp4" poster="media/${p.id}.jpg" controls playsinline preload="none" aria-label="موشن هوية ${p.name}"></video></div></div>
+  <div class="side rv"><div class="vid"><video src="/work/media/${p.id}.mp4" poster="/work/media/${p.id}.jpg" controls playsinline preload="none" aria-label="موشن هوية ${p.name}"></video></div></div>
  </div>
  <div class="book rv"><div class="bh"><span>دليل الهوية كامل · ${p.n} صفحة</span><span>اسحب للجنب ←</span></div>
-  <div class="pages">${Array.from({length:p.n},(_,i)=>`<img src="${p.id}/p${pad(i+1)}.jpg" alt="${p.name}، صفحة ${i+1} من دليل الهوية" loading="lazy" data-g="${p.id}" data-i="${i}">`).join('')}</div></div>
+  <div class="pages">${Array.from({length:p.n},(_,i)=>`<img src="/work/${p.id}/p${pad(i+1)}.jpg" alt="${p.name}، صفحة ${i+1} من دليل الهوية" loading="lazy" data-g="${p.id}" data-i="${i}">`).join('')}</div></div>
 </div></section>`).join('');
 // reveal on scroll
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 // lightbox
 const lb=document.getElementById('lb'),li=lb.querySelector('img');let G=null,I=0;
-const show=()=>{const p=P.find(q=>q.id===G);I=(I+p.n)%p.n;li.src=`${G}/p${pad(I+1)}.jpg`;li.alt=`${p.name}، صفحة ${I+1}`};
+const show=()=>{const p=P.find(q=>q.id===G);I=(I+p.n)%p.n;li.src=`/work/${G}/p${pad(I+1)}.jpg`;li.alt=`${p.name}، صفحة ${I+1}`};
 document.addEventListener('click',e=>{const t=e.target;if(t.matches('.pages img')){G=t.dataset.g;I=+t.dataset.i;show();lb.classList.add('on');lb.querySelector('.x').focus()}});
 lb.querySelector('.x').onclick=()=>lb.classList.remove('on');
 lb.querySelector('.nx').onclick=()=>{I++;show()};lb.querySelector('.pv').onclick=()=>{I--;show()};
