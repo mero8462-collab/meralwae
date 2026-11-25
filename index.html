@@ -92,6 +92,21 @@ nav a:hover{color:var(--cor)}
 .hcta{display:inline-block;margin-top:26px;text-decoration:none;background:var(--cor);color:var(--k);border-radius:999px;padding:14px 34px;font-size:17px;font-weight:500;pointer-events:auto;transition:background .3s}
 .hcta:hover{background:var(--iv)}
 @media (prefers-reduced-motion:reduce){.vbtn{animation:none}}
+.hact{display:flex;align-items:center;gap:10px;pointer-events:auto}
+.wbtn,.mbtn{display:none}
+.hbtns{display:flex;gap:12px;justify-content:center;align-items:center;flex-wrap:wrap;margin-top:26px}
+.hbtns .hcta{margin-top:0}
+.hwork{display:inline-block;text-decoration:none;color:var(--iv);border:1px solid rgba(226,169,143,.55);border-radius:999px;padding:13px 30px;font-size:17px;pointer-events:auto;transition:border-color .3s,color .3s}
+.hwork:hover{border-color:var(--cor);color:var(--cor)}
+#mnav{position:fixed;inset:0;z-index:58;background:rgba(10,6,8,.97);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);display:flex;flex-direction:column;justify-content:center;gap:4px;padding:90px 28px 40px;opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s}
+#mnav.on{opacity:1;visibility:visible}
+#mnav a{text-decoration:none;font-size:22px;padding:13px 0;border-bottom:1px solid rgba(226,169,143,.12);color:var(--iv)}
+#mnav .mwork{font-family:ZMS;font-size:52px;line-height:1.15;color:var(--cor);border-bottom:1px solid rgba(226,169,143,.3);padding-bottom:18px;margin-bottom:8px}
+#mnav .mwork small{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;direction:ltr;text-align:right;color:var(--muted)}
+#mnav .mwork em{display:block;font-family:'IBM Plex Sans Arabic',sans-serif;font-style:normal;font-size:14px;color:var(--muted);margin-top:4px}
+#mnav .mvis{margin-top:26px;border:0;background:var(--cor);color:var(--k);border-radius:999px;text-align:center;font-size:18px;font-weight:500;padding:15px}
+body.mopen{overflow:hidden}
+body.mopen #depth{opacity:0}
 .vband{margin-top:9vh;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;border:1px solid rgba(226,169,143,.35);border-radius:28px;padding:clamp(22px,3vw,36px) clamp(20px,3.4vw,44px);background:linear-gradient(110deg,rgba(90,20,38,.35),rgba(78,51,80,.18))}
 .vband h3{font-family:ZMS;font-weight:400;font-size:clamp(26px,3vw,38px);margin-bottom:6px}
 .vband p{color:var(--muted);line-height:1.8;max-width:56ch}
@@ -240,8 +255,22 @@ nav a:hover{color:var(--cor)}
   .st:nth-child(even) .star,.st:nth-child(odd) .star{right:auto;left:-28.5px}
   #s4 .steps{grid-template-columns:repeat(2,1fr);row-gap:5vh;margin-top:14vh}
   .two{grid-template-columns:1fr;gap:9vh}
-  #depth{display:none}
+  #depth{left:5px;gap:6px}
+  #depth .bar{height:18vh}
+  #depth .lb{font-size:9px;writing-mode:vertical-rl}
+  #depth .num{font-size:10px}
+  header{padding:12px 16px;padding-top:max(12px,env(safe-area-inset-top));background:rgba(10,6,8,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(226,169,143,.1)}
+  header .mk{font-size:26px}
   header .dom{display:none}
+  .hact{gap:7px}
+  .vbtn .lg{display:none}
+  .vbtn{padding:8px 13px;font-size:13px}
+  .wbtn{display:inline-block;text-decoration:none;color:var(--cor);border:1px solid var(--cor);border-radius:999px;padding:7px 14px;font-size:13px;font-weight:500;white-space:nowrap}
+  .mbtn{display:inline-flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;width:38px;height:38px;border-radius:50%;border:1px solid rgba(243,231,220,.25);background:rgba(10,6,8,.4);cursor:pointer;padding:0}
+  .mbtn i{display:block;width:16px;height:1.5px;background:var(--iv);transition:transform .3s}
+  .mbtn[aria-expanded="true"] i:first-child{transform:translateY(3.75px) rotate(45deg)}
+  .mbtn[aria-expanded="true"] i:last-child{transform:translateY(-3.75px) rotate(-45deg)}
+  .hcta,.hwork{padding:13px 24px;font-size:16px}
 }
 @media (prefers-reduced-motion:reduce){#grain,.flame,#s0 .cue i{animation:none}.rv{transition:none}}
 </style>
@@ -256,8 +285,17 @@ nav a:hover{color:var(--cor)}
 <header>
   <a class="mk disp" href="#s0">ميرال</a>
   <nav><a href="/work/">أعمالي</a><a href="#about">من أنا</a><a href="#lead">وش أقود</a><a href="#cases">نتائج</a><a href="#s3">المسيرة</a><a href="#s5">تواصل</a></nav>
-  <a class="vbtn" href="/vision/">ابدأ جلسة الرؤية</a>
+  <div class="hact">
+    <a class="wbtn" href="/work/">أعمالي</a>
+    <a class="vbtn" href="/vision/"><span class="lg">ابدأ </span>جلسة الرؤية</a>
+    <button class="mbtn" id="mbtn" type="button" aria-label="القائمة" aria-expanded="false" aria-controls="mnav"><i></i><i></i></button>
+  </div>
 </header>
+<div id="mnav" aria-hidden="true">
+  <a class="mwork" href="/work/"><small>Selected work</small>أعمالي<em>وقار · رواشن · قمرية</em></a>
+  <a href="#about">من أنا</a><a href="#lead">وش أقود</a><a href="#cases">نتائج</a><a href="#s3">المسيرة</a><a href="#s5">تواصل</a>
+  <a class="mvis" href="/vision/">ابدأ جلسة الرؤية</a>
+</div>
 <div id="depth" aria-hidden="true"><span class="lb">العمق</span><div class="bar"><i></i></div><span class="num">0 m</span></div>
 
 <main>
@@ -272,7 +310,7 @@ nav a:hover{color:var(--cor)}
       <div class="en">MERAL ABOROKBAH</div>
       <div class="slogan">خُلقت لأفكّر</div>
       <div class="pos">قيادة تسويق عقاري · بعقل تنفيذي وروح مبدعة</div>
-      <a class="hcta" href="/vision/">ابدأ جلسة الرؤية</a>
+      <div class="hbtns"><a class="hcta" href="/vision/">ابدأ جلسة الرؤية</a><a class="hwork" href="/work/">شوف أعمالي</a></div>
     </div>
     <div class="cue" id="cue">انزل للأعماق<i></i></div>
     <div class="core" id="core"></div>
@@ -606,6 +644,14 @@ function frame(t){SC=scrollY;docH=document.documentElement.scrollHeight-innerHei
  sky(t);requestAnimationFrame(frame)}
 document.fonts.ready.then(()=>{layoutLogo();requestAnimationFrame(frame)});
 if(reduce){/* static-friendly: everything still driven by scroll, no autoplay motion */}
+</script>
+<script>
+(()=>{const b=document.getElementById('mbtn'),m=document.getElementById('mnav');if(!b||!m)return;
+const set=o=>{m.classList.toggle('on',o);document.body.classList.toggle('mopen',o);b.setAttribute('aria-expanded',o);m.setAttribute('aria-hidden',!o)};
+b.addEventListener('click',()=>set(!m.classList.contains('on')));
+m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>set(false)));
+addEventListener('keydown',e=>{if(e.key==='Escape')set(false)});
+addEventListener('resize',()=>{if(innerWidth>760)set(false)});})();
 </script>
 </body>
 </html>
